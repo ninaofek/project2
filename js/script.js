@@ -11,7 +11,7 @@ $( "#right" ).click(function(){
 
 });
 
-/*form
+/*form  test
 var emailField = document.getElementById('inputEmail');
 emailField.onfocus = function(){
   if (emailField.value =="Email"){
