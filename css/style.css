@@ -136,6 +136,7 @@ border-top: 3px solid #e6630b;
        background-repeat: no-repeat;
        height: 18em;
        border-bottom: 3px solid #e6630b;
+       top: 6rem;
 }
 .text{
   margin-top: 25rem;
@@ -279,3 +280,9 @@ p{margin-top: 0px; margin-bottom:0px;}
   .img-circle{margin-top: 1rem; width: 170px; height: 170px;}
 .embed-responsive {display: none;}
   }
+#calender{
+  width: 500px;
+  height: 500px;
+  color:#fff;
+  float: left;
+}

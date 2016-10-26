@@ -1,0 +1,2 @@
+#time zone setting for IL
+php_value date.timezone Asia/Jerusalem

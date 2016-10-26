@@ -1,3 +1,21 @@
+<?php
+ini_set('display_errors', '0');
+$events = 1;
+include 'header.php';
+
+$message= '';
+$db = new MySQLi('localhost', 'nina', 'nina', 'project2');
+if($db->connect_error){
+  $message = $db->connect_error;
+} else {
+    $sql= 'SELECT * FROM user_details';
+    $result = $db->query($sql);
+    if($db->error){
+      $message = $db->error;
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
    <head>
@@ -32,7 +50,7 @@
                </div>
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                     <li><a href="index.html" title="homePage">Back to home</a></li>
+                     <li><a href="index.php" title="homePage">Back to home</a></li>
                                                </ul>
                </div>
                <!-- /.navbar-collapse -->
@@ -40,13 +58,14 @@
        </header>
        <body>
          <div class="events">
-<h2 class="text-center">Upcoming events</h2>
+           <h2 class="text-center">Upcoming events</h2>
 <div class="col-lg-12 col-sm-12 text-center">
   <div class="col-lg-4 text-center" id="clock">
     <div id="current-time"> </div>
   </div>
-  <div class="col-lg-4" id="calender">
+    <div class="col-lg-4" id="calender">
   </div>
+
   <ul class="col-lg-4 text">
       <li>22/9/2016</li>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -68,3 +87,6 @@
 <script src="js/clock.js"></script>
 </body>
 </html>
+<?php
+include 'footer.php';
+?>
